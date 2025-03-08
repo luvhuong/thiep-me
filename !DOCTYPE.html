@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thiệp 8/3 Tặng Mẹ</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4081;
+            animation: fall 3s linear infinite;
+            font-size: 24px;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .message {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            max-width: 600px;
+            margin: 20px auto;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h1>❤️ Gửi Mẹ Hà Yêu Dấu Của Hướng! ❤️</h1>
+            <p>Nhân ngày 8/3, con chúc mẹ luôn:</p>
+            <p>💖 Khỏe mạnh và hạnh phúc<br>
+               💖 Tràn đầy năng lượng tích cực<br>
+               💖 Luôn xinh đẹp rạng ngời<br>
+               💖 Vững vàng vượt mọi sóng gió</p>
+            <p>Mẹ là người phụ nữ tuyệt vời nhất của đời con!<br>
+            Con yêu mẹ nhiều lắm! ❤️</p>
+           <p> Bảo Không Yêu Nhiều Bằng Con Đâu<p>
+           
+           </p>
+           </p>
+        </div>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>https://jsfiddle.net/
+</body>
+</html>
